@@ -1,0 +1,17 @@
+From: Community Calendar <events@community.example>
+To: Demo Recipient <recipient@example.net>
+Date: Sat, 29 Aug 2026 16:20:00 +0000
+Subject: Workshop registration confirmed
+Message-ID: <event-3321@community.example>
+Received: from mail.community.example (mail.community.example [192.0.2.70]) by mx.example.net with ESMTPS id DEMO07
+Authentication-Results: mx.example.net; spf=pass smtp.mailfrom=community.example; dkim=pass header.d=community.example; dmarc=pass header.from=community.example
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+Your registration for the community workshop is confirmed for September 12.
+The agenda and accessibility information are available at:
+https://events.community.example/workshops/3321
+
+No response is needed. We look forward to seeing you.

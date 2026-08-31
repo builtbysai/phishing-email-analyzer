@@ -1,0 +1,19 @@
+From: PayPal Security <alerts@paypa1-login.top>
+To: Demo Recipient <recipient@example.net>
+Reply-To: Review Desk <case-review@payment-help.click>
+Date: Wed, 26 Aug 2026 07:05:00 +0000
+Subject: URGENT: Account access will be suspended
+Message-ID: <case-88421@paypa1-login.top>
+Received: from gateway.example.net (gateway.example.net [192.0.2.30]) by mx.example.net with ESMTP id DEMO03
+Received: from [198.51.100.23] by gateway.example.net with ESMTP id SOURCE03
+Authentication-Results: mx.example.net; spf=fail smtp.mailfrom=paypa1-login.top; dkim=fail header.d=paypa1-login.top; dmarc=fail header.from=paypa1-login.top
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<h2>Immediate action required</h2>
+<p>Your account will be suspended within the next 2 hours.</p>
+<p>Verify your account and enter your password to prevent closure.</p>
+<p><a href="https://paypa1-login.top/confirm">https://www.paypal.com/security</a></p>
+<p>Payment Review Team</p>
+</body></html>

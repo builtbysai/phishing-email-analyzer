@@ -1,0 +1,25 @@
+From: Example Project Updates <updates@mailer.example.org>
+To: Demo Recipient <recipient@example.net>
+Date: Mon, 24 Aug 2026 09:15:00 +0000
+Subject: August project update
+Message-ID: <update-20260824@mailer.example.org>
+Received: from outbound.mailer.example.org (outbound.mailer.example.org [192.0.2.10]) by mx.example.net with ESMTPS id DEMO01
+Authentication-Results: mx.example.net; spf=pass smtp.mailfrom=mailer.example.org; dkim=pass header.d=mailer.example.org; dmarc=pass header.from=mailer.example.org
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="clean-update-boundary"
+
+--clean-update-boundary
+Content-Type: text/plain; charset="utf-8"
+
+Hello,
+
+The August project notes are ready. Read them at
+https://docs.example.org/releases/august and share feedback at the next meeting.
+
+Regards,
+Example Project Team
+--clean-update-boundary
+Content-Type: text/html; charset="utf-8"
+
+<html><body><p>Hello,</p><p>The August project notes are ready.</p><p><a href="https://docs.example.org/releases/august">https://docs.example.org/releases/august</a></p><p>Regards,<br>Example Project Team</p></body></html>
+--clean-update-boundary--

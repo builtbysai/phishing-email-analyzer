@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phishing-email-analyzer"
+version = "1.0.0"
+description = "Offline, standard-library phishing triage for raw EML files"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Hans Sai"}]
+dependencies = []
+
+[project.scripts]
+phishing-email-analyzer = "phishing_email_analyzer.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

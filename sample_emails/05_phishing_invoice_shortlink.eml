@@ -1,0 +1,26 @@
+From: Billing Desk <billing@invoices.example.org>
+To: Demo Recipient <recipient@example.net>
+Reply-To: Payment Support <help@external-payments.click>
+Date: Thu, 27 Aug 2026 08:10:00 +0000
+Subject: Urgent invoice requires approval
+Message-ID: <invoice-77104@invoices.example.org>
+Received: from [198.51.100.91] by mx.example.net with ESMTP id DEMO05
+Authentication-Results: mx.example.net; spf=softfail smtp.mailfrom=invoices.example.org; dmarc=none header.from=invoices.example.org
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="invoice-boundary"
+
+--invoice-boundary
+Content-Type: text/plain; charset="utf-8"
+
+Urgent: invoice 77104 requires approval within the next 4 hours.
+Sign in to review the payment details at https://bit.ly/3FakeExample.
+The supporting worksheet is attached.
+
+Billing Desk
+--invoice-boundary
+Content-Type: application/vnd.ms-excel.sheet.macroEnabled.12
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="invoice-77104.xlsm"
+
+UEsDBAoAAAAAAHN5bnRoZXRpYy10ZXN0
+--invoice-boundary--

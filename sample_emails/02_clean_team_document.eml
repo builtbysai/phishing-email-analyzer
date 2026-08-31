@@ -1,0 +1,28 @@
+From: Operations Team <operations@corp.example>
+To: Demo Recipient <recipient@example.net>
+Reply-To: Help Desk <helpdesk@support.corp.example>
+Date: Tue, 25 Aug 2026 14:30:00 +0000
+Subject: Updated office guide
+Message-ID: <guide-20260825@corp.example>
+Received: from mail.corp.example (mail.corp.example [192.0.2.20]) by mx.example.net with ESMTPS id DEMO02
+Authentication-Results: mx.example.net; spf=pass smtp.mailfrom=corp.example; dkim=pass header.d=corp.example; dmarc=pass header.from=corp.example
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="clean-guide-boundary"
+
+--clean-guide-boundary
+Content-Type: text/plain; charset="utf-8"
+
+Hello team,
+
+Attached is the updated office guide discussed during Monday's meeting.
+The document contains the new room map and visitor process.
+
+Thanks,
+Operations Team
+--clean-guide-boundary
+Content-Type: application/pdf
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="office-guide.pdf"
+
+JVBERi0xLjQKJXN5bnRoZXRpYyBzYW1wbGUK
+--clean-guide-boundary--

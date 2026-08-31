@@ -1,0 +1,25 @@
+From: Apple ID <security@apple-alerts.xyz>
+To: Demo Recipient <recipient@example.net>
+Date: Fri, 28 Aug 2026 05:55:00 +0000
+Subject: Account locked - verify your identity
+Message-ID: <identity-44931@apple-alerts.xyz>
+Received: from [203.0.113.119] by mx.example.net with ESMTP id DEMO06
+Authentication-Results: mx.example.net; spf=fail smtp.mailfrom=apple-alerts.xyz; dkim=fail header.d=apple-alerts.xyz; dmarc=fail header.from=apple-alerts.xyz
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="idn-boundary"
+
+--idn-boundary
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p>Your account has been locked. Act now to restore access.</p>
+<p>Verify your identity at <a href="https://xn--pple-43d.example/restore">the secure account portal</a>.</p>
+<p>Download the attached verification package if the page does not open.</p>
+</body></html>
+--idn-boundary
+Content-Type: application/zip
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="verification-package.zip"
+
+UEsDBAoAAAAAAHN5bnRoZXRpYy10ZXN0
+--idn-boundary--

@@ -1,0 +1,27 @@
+From: Microsoft 365 <notice@account-review.work>
+To: Demo Recipient <recipient@example.net>
+Reply-To: Mail Admin <mail-admin@response-center.xyz>
+Date: Wed, 26 Aug 2026 11:42:00 +0000
+Subject: Final warning: mailbox access expires today
+Message-ID: <mailbox-19007@account-review.work>
+Received: from [203.0.113.77] by mx.example.net with ESMTP id DEMO04
+Authentication-Results: mx.example.net; spf=softfail smtp.mailfrom=account-review.work; dkim=fail header.d=account-review.work; dmarc=fail header.from=account-review.work
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="mailbox-boundary"
+
+--mailbox-boundary
+Content-Type: text/html; charset="utf-8"
+
+<html><body>
+<p><strong>Final warning</strong>: your mailbox access expires today.</p>
+<p>Sign in to confirm your identity immediately.</p>
+<p><a href="http://198.51.100.42/session">https://login.microsoft.com/account</a></p>
+<p>You can also open the attached secure message.</p>
+</body></html>
+--mailbox-boundary
+Content-Type: text/html; name="Secure_Message.html"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename="Secure_Message.html"
+
+PGh0bWw+PGJvZHk+U3ludGhldGljIHRlc3QgYXR0YWNobWVudC48L2JvZHk+PC9odG1sPg==
+--mailbox-boundary--
