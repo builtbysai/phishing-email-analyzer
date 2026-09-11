@@ -4,6 +4,9 @@ A dependency-light command-line tool that statically analyzes raw `.eml` files f
 
 The analyzer is fully offline at runtime and uses only the Python standard library. It never visits extracted links, executes attachments, performs DNS requests, or sends message data elsewhere.
 
+<p align="center"><img src="assets/terminal-demo.svg" width="800" alt="Terminal demo: phishing-email-analyzer scanning the sample mailbox, flagging 4 of 7 messages as high/critical risk"></p>
+<p align="center"><img src="assets/analysis-pipeline.svg" width="800" alt="Static analysis pipeline: parse, rule groups, findings, scoring, risk bands, and reports"></p>
+
 ## What it checks
 
 ### Headers

@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="684" viewBox="0 0 1200 684">
+  <defs>
+    <pattern id="scan2" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1.2" y="0" fill="#ffffff" opacity="0.022"/>
+    </pattern>
+    <marker id="arr" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9" fill="none" stroke="#2fae5f" stroke-width="1.6"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="2" width="1196" height="680" rx="14" fill="#070b08" stroke="#1d3a26" stroke-width="2"/>
+  <rect x="2" y="2" width="1196" height="680" rx="14" fill="url(#scan2)"/>
+
+  <text x="34" y="42" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="17" fill="#33ff66">how an .eml becomes a verdict</text>
+  <text x="34" y="62" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#54705f">phishing-email-analyzer · static analysis pipeline · no network, no execution</text>
+
+  <g font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace">
+    <!-- 01 input -->
+    <rect x="24" y="240" width="170" height="112" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="40" y="266" font-size="12" fill="#54705f">01 · input</text>
+    <text x="40" y="290" font-size="14" fill="#e9f5ec">raw .eml files</text>
+    <text x="40" y="314" font-size="12" fill="#7ba98c">7 sample messages</text>
+    <text x="40" y="334" font-size="12" fill="#7ba98c">inputs never modified</text>
+
+    <!-- 02 parse -->
+    <rect x="246" y="240" width="200" height="112" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="262" y="266" font-size="12" fill="#54705f">02 · parse</text>
+    <text x="262" y="290" font-size="14" fill="#e9f5ec">stdlib email package</text>
+    <text x="262" y="314" font-size="12" fill="#7ba98c">headers · body text</text>
+    <text x="262" y="334" font-size="12" fill="#7ba98c">links · attachments</text>
+
+    <!-- 03 rule modules -->
+    <rect x="498" y="76" width="220" height="124" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="514" y="100" font-size="13" fill="#33ff66">header_rules.py</text>
+    <text x="514" y="122" font-size="12" fill="#9db8a6">· SPF / DKIM / DMARC outcomes</text>
+    <text x="514" y="142" font-size="12" fill="#9db8a6">· Reply-To vs From mismatch</text>
+    <text x="514" y="162" font-size="12" fill="#9db8a6">· display-name impersonation</text>
+    <text x="514" y="182" font-size="12" fill="#9db8a6">· IP-only originating hops</text>
+
+    <rect x="498" y="232" width="220" height="124" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="514" y="256" font-size="13" fill="#33ff66">url_rules.py</text>
+    <text x="514" y="278" font-size="12" fill="#9db8a6">· link-text vs href mismatch</text>
+    <text x="514" y="298" font-size="12" fill="#9db8a6">· URL shortener services</text>
+    <text x="514" y="318" font-size="12" fill="#9db8a6">· lookalike / homoglyph / punycode</text>
+    <text x="514" y="338" font-size="12" fill="#9db8a6">· IPv4 &amp; IPv6 literal hosts</text>
+
+    <rect x="498" y="388" width="220" height="124" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="514" y="412" font-size="13" fill="#33ff66">content_rules.py</text>
+    <text x="514" y="434" font-size="12" fill="#9db8a6">· urgency &amp; pressure phrases</text>
+    <text x="514" y="454" font-size="12" fill="#9db8a6">· credential-harvest language</text>
+    <text x="514" y="474" font-size="12" fill="#9db8a6">· risky attachments (exe, macros)</text>
+    <text x="514" y="494" font-size="12" fill="#9db8a6">· double-extension filenames</text>
+
+    <!-- 04 findings -->
+    <rect x="762" y="240" width="182" height="112" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="778" y="266" font-size="12" fill="#54705f">04 · findings</text>
+    <text x="778" y="290" font-size="14" fill="#e9f5ec">immutable Finding</text>
+    <text x="778" y="314" font-size="12" fill="#7ba98c">rule_id · weight</text>
+    <text x="778" y="334" font-size="11.5" fill="#7ba98c">evidence · explanation</text>
+
+    <!-- 05 score -->
+    <rect x="992" y="240" width="184" height="112" rx="10" fill="#0a100c" stroke="#2fae5f" stroke-width="1.5"/>
+    <text x="1008" y="266" font-size="12" fill="#54705f">05 · scoring</text>
+    <text x="1008" y="290" font-size="14" fill="#e9f5ec">weighted sum</text>
+    <text x="1008" y="314" font-size="12" fill="#7ba98c">capped at 100</text>
+    <text x="1008" y="334" font-size="12" fill="#7ba98c">→ risk band assigned</text>
+
+    <!-- arrows -->
+    <line x1="196" y1="296" x2="240" y2="296" stroke="#2fae5f" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="448" y1="296" x2="490" y2="140" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="448" y1="296" x2="490" y2="296" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="448" y1="296" x2="490" y2="452" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="720" y1="140" x2="754" y2="296" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="720" y1="296" x2="754" y2="296" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="720" y1="452" x2="754" y2="296" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+    <line x1="946" y1="296" x2="986" y2="296" stroke="#2fae5f" stroke-width="1.6" marker-end="url(#arr)"/>
+    <line x1="1084" y1="354" x2="1084" y2="542" stroke="#2fae5f" stroke-width="1.4" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- bottom: risk bands -->
+  <rect x="24" y="548" width="690" height="108" rx="10" fill="#0a100c" stroke="#1d3a26" stroke-width="1.5"/>
+  <text x="42" y="572" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#54705f">risk bands — score capped at 100</text>
+  <g font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12">
+    <rect x="42" y="582" width="150" height="40" rx="6" fill="#0f2417" stroke="#2fae5f"/>
+    <text x="117" y="607" text-anchor="middle" fill="#33ff66">LOW 0–19</text>
+    <rect x="204" y="582" width="150" height="40" rx="6" fill="#221a08" stroke="#c9a227"/>
+    <text x="279" y="607" text-anchor="middle" fill="#ffd166">MODERATE 20–49</text>
+    <rect x="366" y="582" width="150" height="40" rx="6" fill="#241407" stroke="#b35c1a"/>
+    <text x="441" y="607" text-anchor="middle" fill="#ff9f1c">HIGH 50–74</text>
+    <rect x="528" y="582" width="150" height="40" rx="6" fill="#240f0f" stroke="#b33232"/>
+    <text x="603" y="607" text-anchor="middle" fill="#ff4d5e">CRITICAL 75–100</text>
+  </g>
+
+  <!-- bottom: reporting -->
+  <rect x="738" y="548" width="438" height="108" rx="10" fill="#0a100c" stroke="#1d3a26" stroke-width="1.5"/>
+  <text x="756" y="572" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#54705f">reporting.py → two artifacts</text>
+  <text x="756" y="596" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#9db8a6">◈ phishing-report.html — dark, self-contained</text>
+  <text x="772" y="616" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#7ba98c">URLs rendered as code, never anchors</text>
+  <text x="756" y="638" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#9db8a6">◈ phishing-report.json — machine-readable export</text>
+<text x="600" y="674" text-anchor="middle" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11.5" fill="#54705f">◈ 100% python stdlib · fully offline · links never fetched · attachments never executed · data never leaves the host</text>
+</svg>
