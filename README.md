@@ -115,3 +115,7 @@ All sample messages, people, identifiers, addresses, and message bodies are fict
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
+---
+
+*Built by [Hans Sai](https://builtbysai.com).*
