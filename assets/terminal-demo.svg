@@ -1,51 +1,73 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="648" viewBox="0 0 960 648">
   <defs>
-    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
-      <rect width="4" height="1.2" y="0" fill="#ffffff" opacity="0.022"/>
-    </pattern>
-    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0e1512"/>
-      <stop offset="1" stop-color="#070b08"/>
+    <linearGradient id="tbar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f9fafb"/>
+      <stop offset="1" stop-color="#f1f3f5"/>
     </linearGradient>
   </defs>
 
-  <!-- panel -->
-  <rect x="2" y="2" width="956" height="616" rx="14" fill="url(#sheen)" stroke="#1d3a26" stroke-width="2"/>
-  <rect x="2" y="2" width="956" height="616" rx="14" fill="url(#scan)"/>
+  <!-- window -->
+  <rect x="2" y="2" width="956" height="644" rx="12" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+  <rect x="2" y="2" width="956" height="52" rx="12" fill="url(#tbar)" stroke="none"/>
+  <rect x="2" y="38" width="956" height="14" fill="url(#tbar)" stroke="none"/>
+  <line x1="2" y1="52" x2="958" y2="52" stroke="#d0d7de" stroke-width="1"/>
 
-  <!-- title bar -->
-  <circle cx="30" cy="30" r="6.5" fill="#ff5f57"/>
-  <circle cx="52" cy="30" r="6.5" fill="#febc2e"/>
-  <circle cx="74" cy="30" r="6.5" fill="#28c840"/>
-  <text x="480" y="35" text-anchor="middle" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="13" fill="#7ba98c">analyst@bluebox: ~/phishing-email-analyzer</text>
-  <rect x="846" y="19" width="82" height="22" rx="11" fill="#0f2417" stroke="#2fae5f"/>
-  <text x="887" y="35" text-anchor="middle" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="11" fill="#33ff66" letter-spacing="1">OFFLINE</text>
-  <line x1="2" y1="52" x2="958" y2="52" stroke="#1d3a26" stroke-width="1"/>
+  <!-- traffic dots + title -->
+  <circle cx="30" cy="26" r="6" fill="#e5e7eb"/>
+  <circle cx="52" cy="26" r="6" fill="#e5e7eb"/>
+  <circle cx="74" cy="26" r="6" fill="#e5e7eb"/>
+  <text x="480" y="31" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13.5" fill="#57606a">analyst — phishing-email-analyzer</text>
+  <rect x="842" y="15" width="86" height="22" rx="11" fill="#ffffff" stroke="#d0d7de"/>
+  <text x="885" y="30" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="10.5" fill="#57606a" letter-spacing="1.5">OFFLINE</text>
 
   <!-- terminal body -->
-  <g font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15">
-    <text x="34" y="92"><tspan fill="#33ff66">$ </tspan><tspan fill="#e9f5ec">python -m phishing_email_analyzer sample_emails</tspan></text>
-    <text x="34" y="120"><tspan fill="#e9f5ec">Analyzed 7 email(s); </tspan><tspan fill="#ff4d5e" font-weight="bold">4 high/critical risk.</tspan></text>
-    <text x="34" y="148" fill="#6f8a79">HTML report:  /home/analyst/phishing-report.html</text>
-    <text x="34" y="176" fill="#6f8a79">JSON export:  /home/analyst/phishing-report.json</text>
+  <g font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="14.5">
+    <text x="36" y="92"><tspan fill="#0969da" font-weight="600">$ </tspan><tspan fill="#24292f">python -m phishing_email_analyzer sample_emails</tspan></text>
+    <text x="36" y="120"><tspan fill="#24292f">Analyzed 7 email(s); </tspan><tspan fill="#cf222e" font-weight="700">4 high/critical risk.</tspan></text>
+    <text x="36" y="148" fill="#57606a">HTML report:  /home/analyst/phishing-report.html</text>
+    <text x="36" y="174" fill="#57606a">JSON export:  /home/analyst/phishing-report.json</text>
 
-    <text x="34" y="222"><tspan fill="#33ff66">$ </tspan><tspan fill="#e9f5ec">python analyze.py sample_emails/03_phishing_payment_alert.eml \</tspan></text>
-    <text x="52" y="250" fill="#e9f5ec">--json findings.json</text>
-    <text x="34" y="278"><tspan fill="#e9f5ec">Analyzed 1 email(s); </tspan><tspan fill="#ff4d5e" font-weight="bold">1 high/critical risk.</tspan></text>
-    <text x="34" y="306" fill="#6f8a79">JSON export:  /home/analyst/findings.json</text>
+    <text x="36" y="218"><tspan fill="#0969da" font-weight="600">$ </tspan><tspan fill="#24292f">python -m phishing_email_analyzer sample_emails/05_phishing_invoice_shortlink.eml \</tspan></text>
+    <text x="54" y="244" fill="#24292f">--html findings.html --json findings.json</text>
+    <text x="36" y="272"><tspan fill="#24292f">Analyzed 1 email(s); </tspan><tspan fill="#cf222e" font-weight="700">1 high/critical risk.</tspan></text>
+    <text x="36" y="298" fill="#57606a">JSON export:  /home/analyst/findings.json</text>
 
-    <text x="34" y="348" fill="#54705f" letter-spacing="3">──────────── batch summary ────────────</text>
+    <text x="36" y="342" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11.5" fill="#57606a" letter-spacing="1.5">BATCH BREAKDOWN — FROM phishing-report.json</text>
 
-    <text x="34" y="382"><tspan fill="#33ff66">✓</tspan><tspan fill="#d8e6dc">  01_clean_project_update.eml</tspan><tspan fill="#6f8a79">        score  </tspan><tspan fill="#e9f5ec">0</tspan><tspan fill="#33ff66">   LOW</tspan></text>
-    <text x="34" y="410"><tspan fill="#33ff66">✓</tspan><tspan fill="#d8e6dc">  02_clean_team_document.eml</tspan><tspan fill="#6f8a79">         score  </tspan><tspan fill="#e9f5ec">0</tspan><tspan fill="#33ff66">   LOW</tspan></text>
-    <text x="34" y="438"><tspan fill="#ff4d5e">✖</tspan><tspan fill="#d8e6dc">  03_phishing_payment_alert.eml</tspan><tspan fill="#6f8a79">      score  </tspan><tspan fill="#ff4d5e" font-weight="bold">100</tspan><tspan fill="#ff4d5e">  CRITICAL</tspan></text>
-    <text x="34" y="466"><tspan fill="#ff4d5e">✖</tspan><tspan fill="#d8e6dc">  04_phishing_mailbox_notice.eml</tspan><tspan fill="#6f8a79">     score  </tspan><tspan fill="#ff4d5e" font-weight="bold">100</tspan><tspan fill="#ff4d5e">  CRITICAL</tspan></text>
-    <text x="34" y="494"><tspan fill="#ff4d5e">✖</tspan><tspan fill="#d8e6dc">  05_phishing_invoice_shortlink.eml</tspan><tspan fill="#6f8a79">    score  </tspan><tspan fill="#ff4d5e" font-weight="bold">84</tspan><tspan fill="#ff4d5e">  CRITICAL</tspan></text>
-    <text x="34" y="522"><tspan fill="#ff4d5e">✖</tspan><tspan fill="#d8e6dc">  06_phishing_idn_lookalike.eml</tspan><tspan fill="#6f8a79">        score  </tspan><tspan fill="#ff4d5e" font-weight="bold">100</tspan><tspan fill="#ff4d5e">  CRITICAL</tspan></text>
-    <text x="34" y="550"><tspan fill="#33ff66">✓</tspan><tspan fill="#d8e6dc">  07_clean_event_confirmation.eml</tspan><tspan fill="#6f8a79">      score  </tspan><tspan fill="#e9f5ec">0</tspan><tspan fill="#33ff66">   LOW</tspan></text>
+    <g font-size="13.5">
+      <text x="36" y="376"><tspan fill="#24292f">01_clean_project_update.eml</tspan></text>
+      <text x="330" y="376"><tspan fill="#8b949e">score </tspan><tspan fill="#24292f">0</tspan></text>
+      <text x="446" y="376"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">0</tspan></text>
+      <rect x="586" y="362" width="52" height="20" rx="10" fill="#dafbe1"/><text x="612" y="377" text-anchor="middle" font-size="11" font-weight="600" fill="#116329">LOW</text>
+      <text x="36" y="402"><tspan fill="#24292f">02_clean_team_document.eml</tspan></text>
+      <text x="330" y="402"><tspan fill="#8b949e">score </tspan><tspan fill="#24292f">0</tspan></text>
+      <text x="446" y="402"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">0</tspan></text>
+      <rect x="586" y="388" width="52" height="20" rx="10" fill="#dafbe1"/><text x="612" y="403" text-anchor="middle" font-size="11" font-weight="600" fill="#116329">LOW</text>
+      <text x="36" y="428"><tspan fill="#24292f">03_phishing_payment_alert.eml</tspan></text>
+      <text x="330" y="428"><tspan fill="#8b949e">score </tspan><tspan fill="#cf222e" font-weight="700">100</tspan></text>
+      <text x="446" y="428"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">10</tspan></text>
+      <rect x="586" y="414" width="80" height="20" rx="10" fill="#ffebe9"/><text x="626" y="429" text-anchor="middle" font-size="11" font-weight="700" fill="#cf222e">CRITICAL</text>
+      <text x="36" y="454"><tspan fill="#24292f">04_phishing_mailbox_notice.eml</tspan></text>
+      <text x="330" y="454"><tspan fill="#8b949e">score </tspan><tspan fill="#cf222e" font-weight="700">100</tspan></text>
+      <text x="446" y="454"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">11</tspan></text>
+      <rect x="586" y="440" width="80" height="20" rx="10" fill="#ffebe9"/><text x="626" y="455" text-anchor="middle" font-size="11" font-weight="700" fill="#cf222e">CRITICAL</text>
+      <text x="36" y="480"><tspan fill="#24292f">05_phishing_invoice_shortlink.eml</tspan></text>
+      <text x="330" y="480"><tspan fill="#8b949e">score </tspan><tspan fill="#cf222e" font-weight="700">84</tspan></text>
+      <text x="446" y="480"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">8</tspan></text>
+      <rect x="586" y="466" width="80" height="20" rx="10" fill="#ffebe9"/><text x="626" y="481" text-anchor="middle" font-size="11" font-weight="700" fill="#cf222e">CRITICAL</text>
+      <text x="36" y="506"><tspan fill="#24292f">06_phishing_idn_lookalike.eml</tspan></text>
+      <text x="330" y="506"><tspan fill="#8b949e">score </tspan><tspan fill="#cf222e" font-weight="700">100</tspan></text>
+      <text x="446" y="506"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">9</tspan></text>
+      <rect x="586" y="492" width="80" height="20" rx="10" fill="#ffebe9"/><text x="626" y="507" text-anchor="middle" font-size="11" font-weight="700" fill="#cf222e">CRITICAL</text>
+      <text x="36" y="532"><tspan fill="#24292f">07_clean_event_confirmation.eml</tspan></text>
+      <text x="330" y="532"><tspan fill="#8b949e">score </tspan><tspan fill="#24292f">0</tspan></text>
+      <text x="446" y="532"><tspan fill="#8b949e">findings </tspan><tspan fill="#24292f">0</tspan></text>
+      <rect x="586" y="518" width="52" height="20" rx="10" fill="#dafbe1"/><text x="612" y="533" text-anchor="middle" font-size="11" font-weight="600" fill="#116329">LOW</text>
+    </g>
   </g>
 
-  <!-- footer strip -->
-  <line x1="34" y1="576" x2="926" y2="576" stroke="#1d3a26" stroke-width="1"/>
-  <text x="480" y="598" text-anchor="middle" font-family="Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="12" fill="#54705f">◈  python stdlib only  ·  fully offline  ·  links never fetched  ·  attachments never executed</text>
+  <!-- footer -->
+  <line x1="36" y1="572" x2="924" y2="572" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="480" y="600" text-anchor="middle" font-family="-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#57606a">python stdlib only  ·  fully offline  ·  links never fetched  ·  attachments never executed  ·  inputs never modified</text>
+  <text x="480" y="626" text-anchor="middle" font-family="SFMono-Regular,Consolas,'Liberation Mono',Menlo,monospace" font-size="11" fill="#8b949e">average batch score 54.9 — a low score is not proof a message is safe</text>
 </svg>
